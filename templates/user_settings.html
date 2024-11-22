@@ -1,0 +1,12 @@
+{% extends 'user_base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Settings</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ currency_form.as_p }}
+        <button type="submit" class="btn btn-primary">Save Settings</button>
+    </form>
+</div>
+{% endblock %}
